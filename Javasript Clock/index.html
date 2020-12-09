@@ -30,9 +30,9 @@
         let hh = day.getHours() * 30;
         let mm = day.getMinutes() * deg;
         let ss = day.getSeconds() * deg;
-        
-        hr.style.transform = 'rotateZ(${(hh)+(mm/12)}deg)';
-        mn.style.transform = 'rotateZ(${mm}deg)';
+
+        hr.style.transform = 'rotateZ(${(hh)+(mm/12)}deg)';  //for some reason these 3 lines
+        mn.style.transform = 'rotateZ(${mm}deg)';            //don't work.
         sc.style.transform = 'rotateZ(${ss}deg)';
     })
     </script>
