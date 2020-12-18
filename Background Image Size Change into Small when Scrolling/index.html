@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Size Change on Scroll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header"></div>
+    <section>
+      <h2>Background Size Change into Small when Scrolling</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non mauris sed ex tincidunt 
+        sollicitudin id sit amet enim. Mauris varius ultricies sapien vitae lacinia. Suspendisse vel nibh consequat, 
+        mollis eros in, euismod dolor. Aliquam erat volutpat. Integer ac augue fringilla, porta leo ac, 
+        imperdiet diam. Sed feugiat, lorem non semper tempus, purus justo dapibus turpis, 
+        in consequat velit arcu nec mauris. Duis eget quam nisi. Etiam blandit, lorem in luctus 
+        consectetur, urna urna congue ex, id malesuada lectus lacus ut ligula. Nulla tempus sem 
+        ac ante consequat, in fermentum justo rhoncus. Ut mollis, turpis ac mollis auctor, eros neque 
+        congue elit, nec facilisis eros ante id risus. Sed leo tortor, pellentesque sed massa at, dapibus 
+        vehicula risus. Donec rutrum tortor vitae euismod ultricies. Curabitur et mollis diam, et placerat 
+        purus.<br><br>Curabitur ac nulla laoreet, auctor dui eu, feugiat leo. Proin ultrices dolor neque, 
+        tincidunt ornare nulla tincidunt ut. Mauris dapibus ullamcorper libero in placerat. 
+        Vivamus maximus nunc nec nibh fermentum, euismod aliquam leo auctor. Donec euismod tristique 
+        lacus eget dictum. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per 
+        conubia nostra, per inceptos himenaeos. Aliquam turpis quam, lobortis ullamcorper ante et, efficitur 
+        pellentesque ante. Ut vel ultricies nisi, et blandit eros. In suscipit eu nulla sit amet volutpat.</p>
+    </section>
+    <script type="text/javascript">
+      const bg = document.getElementById('header');
+      window.addEventListener('scroll',function(){
+        bg.style.backgroundSize = 160 - +window.pageYOffset/12+'%';
+        bg.style.opacity = 1 - +window.pageYOffset/700+''
+      })
+    </script>
+</body>
+</html>
